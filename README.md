@@ -17,4 +17,4 @@ scrapy crawl businesses -O businesses.json
 
 # Examples of businesses
 ![img.png](Business examples/img.png)
-![img_4.png](Business examples/img_4.png)
+![img.png](Business examples/img1.png)
