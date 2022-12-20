@@ -16,5 +16,5 @@ scrapy crawl businesses -O businesses.json
 -> Input category name and location
 
 # Examples of businesses
-![img.png](Business examples/img.png)
-![img.png](Business examples/img1.png)
+![img.png](img.png)
+![img.png](img1.png)
