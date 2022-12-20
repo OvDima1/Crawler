@@ -13,14 +13,14 @@ class BusinessSpider(scrapy.Spider):
         for business in response.css(".css-1agk4wl a::attr(href)"):
             yield response.follow(business, callback=self.parse_business)
 
-            # next_page = (
-            #     response.css(".pagination-links__09f24__bmFj8"
-            #                  " > div")[-1]
-            #     .css("a::attr(href)")
-            #     .get()
-            # )
-            # if next_page is not None:
-            #     yield scrapy.Request(next_page, callback=self.parse)
+            next_page = (
+                response.css(".pagination-links__09f24__bmFj8"
+                             " > div")[-1]
+                .css("a::attr(href)")
+                .get()
+            )
+            if next_page is not None:
+                yield scrapy.Request(next_page, callback=self.parse)
 
     def parse_business(self, response: Response):
         yield {
